@@ -1,9 +1,10 @@
 body {
-    font: 20px "Gill Sans", Verdana, sans-serif;
+    font: 20px "Courier New", monospace;
     line-height: 1.8;
     color: #000000;
-    background-color: #fffcf4;
+    background-color: rgb(255, 252, 244);
     padding-top: 0px !important;
+    cursor:url(http://media.tumblr.com/tumblr_m98yzgB9kQ1qid2nw.gif), url(http://media.tumblr.com/tumblr_m98yzgB9kQ1qid2nw.gif), auto;
   }
 
 .textcontainer {
@@ -11,12 +12,22 @@ body {
   text-decoration: none;
 }
 
-p {font-size: 16px;}
-.margin {margin-bottom: 10px;}
+p {font-size: 10px;}
+
+.margin { margin-top: 0; margin-bottom: 10px;}
 
 a {
   color: #000000;
   text-decoration: none;
+  transition: 0.3s;
+  cursor: url(http://media.tumblr.com/tumblr_m98yzgB9kQ1qid2nw.gif), url(http://media.tumblr.com/tumblr_m98yzgB9kQ1qid2nw.gif), auto;
+}
+
+a:hover {
+  color: rgb(255, 78, 149);
+  transition: 0.3s;
+  padding: 15px 15px;
+  font-style: oblique;
 }
 
 .container-fluid {
@@ -25,9 +36,9 @@ a {
 }
 
 nav {
-  background-color: #ffffff;
+  background-color: #fff6d2cb;
   color: #EEE7E8;
-  padding: 50px 50px;
+  padding: 50px 60px;
   text-decoration: none;
 }
 
@@ -36,35 +47,55 @@ nav {
   justify-content: flex-start;
   gap: 30px;
   text-decoration: none;
+  cursor:url(http://media.tumblr.com/tumblr_m98yzgB9kQ1qid2nw.gif), url(http://media.tumblr.com/tumblr_m98yzgB9kQ1qid2nw.gif), auto;
 }
 
 .nav-title{
+  display: block;
   margin-left: 15px;
   margin-right: 15px;
+  border-radius: 20px;
+  padding: 15px 15px;
   color: #000000;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.nav-title:hover {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 20px;
   text-decoration: none;
 }
 
 .nav-link {
-  border: 3px outset #a3a3a3;
+  border: 3px outset #a6a6a6;
   border-radius: 20px;
-  padding: 10px 30px;
-  background-color: #a3a3a3;
-  color: #EEE7E8;
+  padding: 10px 10px;
+  background-color: #7d7b7beb;
+  color: #ffffff;
   transition: 0.3s;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  border: 3px outset #FFFFFF;
+  /* border: 3px outset #FFFFFF;
   border-radius: 20px;
   padding: 10px 30px;
   background-color: #a3a3a3;
   transition: 0.3s;
+  cursor:url(http://media.tumblr.com/tumblr_m98yzgB9kQ1qid2nw.gif), url(http://media.tumblr.com/tumblr_m98yzgB9kQ1qid2nw.gif), pointer; */
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
 }
 
+
 #btn {
-  border: 3px outset #FFFFFF;
+  border: 3px outset #ffffff;
   border-radius: 40px;
   padding: 20px 30px;
   background-color: #a3a3a3;
@@ -72,13 +103,13 @@ nav {
   transition: 0.3s;
 }
 
-#btn:hover {
+/* #btn:hover {
   border: 3px inset #FFFFFF;
   border-radius: 40px;
   padding: 10px 30px;
   background-color: #a3a3a3;
   transition: 0.3s;
-}
+} */
 
 .row {
   margin: auto auto;
@@ -109,5 +140,79 @@ code {
 }
 
 #aboutme {
-  padding: 20px;
+  padding: 30px;
+}
+
+
+/* https://stackoverflow.com/questions/8168850/pictures-are-being-distorted-when-being-placed-on-my-html */
+.img-wrapper {display:inline-block; height:600px; overflow:hidden; width:600px;}
+.img-wrapper img {height:500px;}
+
+/* https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_mark_default_css */
+mark { 
+  background-color: rgba(255, 252, 244, 0.4);
+  color: black;
+}
+mark2 { 
+  background-color: rgba(145, 253, 170, 0.4);
+  color: black;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.cont {
+  position: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Make the image to responsive */
+.image {
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: red;
+}
+
+/* When you mouse over the container, fade in the overlay icon*/
+.cont:hover .overlay {
+  opacity: 1;
+}
+
+/* The icon inside the overlay is positioned in the middle vertically and horizontally */
+.icon {
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* When you move the mouse over the icon, change color */
+.fa-user:hover {
+  color: #eee;
 }
