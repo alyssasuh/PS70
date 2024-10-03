@@ -28,17 +28,80 @@
 <div class="textcontainer">
 <p class="margin">   </p>
 
-<h1 style = "text-align: center;">Week 3: COMING SOON!!!!</h1>
-<image style = "width: 100%"src = "ComingSoon.png" alt = "Coming Soon"> </image>
-<br><br>
 
 <h3>Week 4: Microcontroller Programming</h3>
+<br>
 
-<h4>[Do Something with an arduino]</h4>
+<p class = "margin"></p>
+The assignment for this week was to program something with a microcontroller. 
+<p class = "margin"></p>
+
+<br>
+
+<h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">The Design</h2>
+<p class = "margin"></p>
+As alluded in the previous week's documentation, I am contining my work with the blinking cyclopse for this week.
+I addition to improving the physical aspects of the sculpture, I used this week to focus my energy on leveraging the microcontroller to control the blinking.
+<p class = "margin"></p>
+
+<image style = "width: 70%" src = "4.1.png" alt = "Design" class = center> </image><br>
+
+<h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Mechanical Improvement</h2>
+<p class = "margin"></p>
+Before jumping straight into hooking up the moter to the microcontroller, I set my sight to improving the existing mechanics of the kinetic structure.
+I was not completely satisfied with with the range in motion I achieved on the eyeball from the past week so saught for new solutions.
+After multiple iterations, I concluded on a smaller gear (I realized that the larger gear was increasing the size of the mechanism without increasing much of motion of the eyeball) and an elongated slot on the second arm so that the wire attached to the eyelid could move more freely.
+Additionally, I manipulated the wire such that the cams mechanism would be guarded from folding into itself: 
+<p class = "margin"></p>
+
+<image style = "width: 80%" src = "4.2.png" alt = "Design" class = center> </image>
+
+<p class = "margin"></p>
+Final movement: 
+<p class = "margin"></p>
+
+<br>
+<video width="70%" controls autoplay muted class = center src="IMG_1968.mov" type="video/mp4" >
+</video>
+<br>
+
+<br>
+<h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Micontroller Programing</h2>
+<p class = "margin"></p>
+With a motor driver, it was fairly simple to convert the motor system to work compatibly with the arduino. 
+In addition to just a motor, I added a button that would turn the motor and a led simutaneously on when clicked once and turn back off when clicked again.
+<p class = "margin"></p>
+
+<br>
+<video width="70%" controls autoplay muted class = center src="IMG_2002.mov" type="video/mp4" >
+</video>
+<br><br>
+
+<p class = "margin"></p>
+However, I wanted to shrink the microcontroller system so that all the electronics fit neatly inside of body of the box.
+I turned towards the 	SEEEDSTUDIO XIAO microcontroller, which was the smallest microcontroller we had on hand, and adapted the mechanical system with the following code below:
+<p class = "margin"></p>
 
 
+<iframe src="https://app.arduino.cc/sketches/c233c78b-8a09-49f8-adbe-f315cfc3c032?view-mode=embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+<br><br>
+<video width="70%" controls autoplay muted class = center src="IMG_2015.mov" type="video/mp4" >
+</video>
+<br><br>
 
+<p class = "margin"></p>
+schematic for electrical circuit:
+<p class = "margin"></p>
 
+<image style = "width: 70%" src = "4.3.png" alt = "Electrical Circuit" class = center> </image>
+
+<p class = "margin"></p>
+Next steps are soldering all these components together so that all of the wires fit nicely into the body as originally planned.
+<p class = "margin"></p>
+
+<br>
+<image style = "width: 20%" src = "New group.png" alt = "End Pic" class = center> </image> 
+<br><br>
 
 </div>
 </xmp>
