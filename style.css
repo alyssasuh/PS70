@@ -15,8 +15,8 @@ body {
 p {font-size: 10px;}
 
 h1{
-  font-size: 48px;
-  padding: 30px;
+  font-size: 38px;
+  padding: 20px;
   line-height: 1.2;
   font-weight: 500;
   color: #212112;
@@ -302,6 +302,22 @@ h1 span{
 .fade {
   animation-name:fade;
   animation-duration: 1.5s;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 @keyframes fade {

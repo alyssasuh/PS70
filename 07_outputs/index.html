@@ -26,14 +26,87 @@
 <body>
 <xmp style="display:none;">
 <div class="textcontainer">
-<p class="margin">   </p>
 
-<h3>Week 7: Electronic Outputs</h3>
+<h1 style = "text-align: center;">Week 7: Electronic Output</h1>
+<br>
+
+<p class = "margin"></p>
+We were assigned to tackle the most intimidating/challenging aspect of our final project or, our minimal viable product (otherwise known as "MVP week") .
+<p class = "margin"></p>
+
+<br><h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Bone Conduction Transducer</h2
+
+
+<p class = "margin"></p>
+In combination of last week's asignment where I tackled the IS2 mic on a ESP32 microcontroller interface, I attempted to get my output sensor of choice: the <mark2><a href="https://www.adafruit.com/product/1674">adafruit bone conduction transducer</a></mark2>.
+I selected this tranducer as my choice of output for my wearable device because of it's ability to directly transfer sound through vibrations on the bone rather than through the ear canal.
+This is ideal for my personal assistant device because it won't block out regular sounds and should conceptually be compatible with headphones or AirPods.
+Auditory stimulation that I find suprisingly overlooked despite the novelity it delivers as a relatively private yet non-exculsive mode of audio input.
+<br><br>
+<image style = "height: 50%" src = "7.1.png" alt = "Design" class = center> </image>
+<br>
+
+Before, I played around with the electronic, I designed a small casing to protect the small electrical components from enviornmental factors and prevention from the circuit shorting.
+<p class = "margin"></p>
+
+<br><br>
+<image style = "width: 80%" src = "7.2.png" alt = "Design" class = center> </image>
+<br>
+
+<br><h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Electronic Hardware</h2>
+
+<p class = "margin"></p>
+Now moving onto the fun part, I spent a lot of time struggling to find a compatible microcontroller that worked for both audio input and output in I2S format. 
+I started off with an ESP32-S3, however, I quickly realized that it's unfortunently lacks a digital to analog converter (DAC) which would prevent me from utilizing the IS2 mic simutaneously with the transducer.
+Eventually I landed on adafruit's <mark2><a href="https://www.adafruit.com/product/5400?gad_source=1&gclid=Cj0KCQjw4Oe4BhCcARIsADQ0csnxw0hi-uT8jOgHyUr3NYEbUdvO5iDYycLkLm7ZElyDfw6XNtqtFyIaAoFdEALw_wcB">ESP32 feather</a></mark2> which has DAC, IS2 peripheral, WiFi, and Bluetooth compatibility. 
+Though the size of the board is not ideal for the final device, it serves as solid board that I an experiment and run tests on.
+Eventually, I will need to find a way to scale the board down with the neceassary features.
+
+<br><br>
+From there, I found various resouceful documentation for outputting sound via an <mark2><a href="https://www.adafruit.com/product/3006">IS2 Amplifier (MAX98357A)</a></mark2> from the ESP32 board.
+I specifically found the DroneBot Workshop <mark2><a href="https://www.youtube.com/watch?v=m-MPBjScNRk">ESP32 Sound - Working with I2S</a></mark2> specifically helpful as it walks through all the basic principles for both the input and output aspect of working with I2S audio.
+Their <mark2><a href="https://dronebotworkshop.com/esp32-i2s/">documentation</a></mark2> linked in the video was also extremely resourceful.
+Taken from this write up, I found code for connecting the microcontroller to wifi and streaming a radio station/music file of choice from a connected speaker.
+<iframe src="https://app.arduino.cc/sketches/2e6ce546-f4af-48f8-a534-baecebde1ddb?view-mode=embed" style="height:1000px;width:100%;margin:10px 0" frameborder=0></iframe>
+<br>
+Although the bone conduction transducer may not seem anything like a speaker, functionally it works the same. 
+I hooked up the transducer to the amplifier as you would normally with a speaker: 
+
+<br><br>
+<image style = "width: 80%" src = "7.3.png" alt = "Electical Schematic" class = center> </image>
+
+
+<p class = "margin"></p>
 
 
 
-<h4>Assignment: Minimum Viable Product for Final Project</h4>
+<p class = "margin"></p>
+Bone Conductor Working in Action:
+<br><br>
+<video width="70%" controls autoplay class = center src="IMG_2301.mov" type="video/mp4" >
+</video>
+<br>
+The bone conductor performs effectively on flat or hollow surfaces but faces significantly more difficulty on dense, uneven surfaces like body parts. 
+I am wondering if it will involve tuning the frequency to be more compatible with specific surfaces - in this case bone and skin.
+This is something I will need to troubleshoot throughout the upcoming weeks.
+<p class = "margin"></p>
 
+<br>
+<h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Future Milestones</h2>
+
+<p class = "margin"></p>
+I plan on further researching on making the bone conductor more compatible with tranfering audio to the bone. I found a published paper on <mark2><a href="https://www.researchgate.net/publication/317352182_Head-mounted_display_for_multimodal_alarms_in_intensive_care_units">Head-mounted display for multimodal alarms in intensive care units</a></mark2>
+using the same bone conductor transducer and feather combination to make a headmounted display that is able to produce audio via bone conduction. 
+<br><br>
+<image style = "width: 80%" src = "7.4.png" alt = "Electical Schematic" class = center> </image><br>
+
+I will also need to plan out a solution to minimize the electronics, specifically the microcontroller so that it will fit compactly behind my ear as planned.
+
+<p class = "margin"></p>
+
+<br>
+<image style = "width: 20%" src = "Output.png" alt = "End Pic" class = center> </image> 
+<br><br>
 
 </div>
 </xmp>
