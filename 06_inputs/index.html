@@ -119,26 +119,126 @@ In this setup, I calibrated the heart-slider capacitor based on the distance bet
     <td>200</td>
   </tr>
 </table>
+<br><br>
 
-<br>
-<image style = "width: 600px" src = "6.2.png" alt = "Design" class = center> </image>
-<br>
-
-Capacitor working in action:
+Capacitor Calibrated:
 <br><br>
 <p class = "margin"></p>
 
-<video width="70%" controls autoplay muted class = center src="IMG_2251.mov" type="video/mp4" >
-</video>
+<div style="display: flex; justify-content: center; align-items: center;">
+  <!-- First image -->
+  <image style = "width: 45%; margin-right: 5%;" src = "6.2.png" alt = "Design" class = center> </image> 
+  <!-- Second image -->
+  <video width="50%" controls autoplay muted class = center src="IMG_2251.mov" type="video/mp4" ></video>
+</div>
+
 <br><br>
 
 <br>
 <h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Calibrating 1S2 Mic</h2>
 
+<image style = "width: 40%" src = "6.6.png" alt = "Design" class = center> </image><br><br>
+
 <p class = "margin"></p>
-The second part of the assignment was to select an input sensor of our choice and calibrating it for use.
-Since I plan on utilizing a mic as my input sensor for my final project, I looked into 
+The second part of the assignment involved selecting an input sensor of our choice and calibrating it for use. 
+Since I intend to use a microphone as the input sensor for my final project, I focused on calibrating an I2S microphone. 
+This was my first experience working with microphones and the I2S interface, setting the tone for the rest of the semester.
+I hooked up the mic to an ESP32 and put a low pass filter on the sound to help filter out some of the white noise.
+<br><br>
+<iframe src="https://app.arduino.cc/sketches/2708f488-d0dd-4848-adea-095bbb7b279f?view-mode=embed" style="height:800px;width:100%;margin:10px 0" frameborder=0></iframe>
+I calibrated the mic in a quiet room to a <mark2><a href="https://youtube.com/shorts/IQTtK6h4Prg?si=XF22OSv5x7eSQjTD">sound</a></mark2> at a known sound intensity (avg = 77dB) and compared it to the amplitude of the waves picked up in relation to the distance.
+<br><br>
 <p class = "margin"></p>
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <!-- First image -->
+  <img src="6.7.png" alt="Design" style="width: 80%; margin-right: 5%;">
+  <!-- Second image -->
+  <img src="6.8.png" alt="Design" style="width: 15%;">
+</div>
+
+<br><br>
+<table>
+  <tr>
+    <th>Distance (cm)</th>
+    <th>Output Trial 1</th>
+    <th>Output Trial 2</th>
+    <th>Average Output</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>1,400</td>
+    <td>1,150</td>
+    <td>1,275</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1,300</td>
+    <td>900</td>
+    <td>1,100</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>700</td>
+    <td>700</td>
+    <td>700</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>500</td>
+    <td>500</td>
+    <td>500</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>400</td>
+    <td>350</td>
+    <td>375</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>300</td>
+    <td>300</td>
+    <td>300</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>270</td>
+    <td>250</td>
+    <td>260</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>250</td>
+    <td>225</td>
+    <td>237.5</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>200</td>
+    <td>200</td>
+    <td>200</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>200</td>
+    <td>200</td>
+    <td>200</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>200</td>
+    <td>200</td>
+    <td>200</td>
+  </tr>
+  <tr>
+    <td>40</td>
+    <td>200</td>
+    <td>200</td>
+    <td>200</td>
+  </tr>
+</table>
+
 
 <br>
 <image style = "width: 20%" src = "Input.png" alt = "End Pic" class = center> </image> 
