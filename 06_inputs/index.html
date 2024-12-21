@@ -146,16 +146,19 @@ This was my first experience working with microphones and the I2S interface, set
 I hooked up the mic to an ESP32 and put a low pass filter on the sound to help filter out some of the white noise.
 <br><br>
 <iframe src="https://app.arduino.cc/sketches/2708f488-d0dd-4848-adea-095bbb7b279f?view-mode=embed" style="height:800px;width:100%;margin:10px 0" frameborder=0></iframe>
-I calibrated the mic in a quiet room to a <mark2><a href="https://youtube.com/shorts/IQTtK6h4Prg?si=XF22OSv5x7eSQjTD">sound</a></mark2> at a known sound intensity (avg = 77dB) and compared it to the amplitude of the waves picked up in relation to the distance.
+Furthermore, the mic was calibrated in a quiet room to a <mark2><a href="https://youtube.com/shorts/IQTtK6h4Prg?si=XF22OSv5x7eSQjTD">sound</a></mark2> at a known sound intensity (avg = 77dB). 
+This was compared to the absolute amplitude of the waves picked up in relation to distance away from the mic.
 <br><br>
 <p class = "margin"></p>
 
 <div style="display: flex; justify-content: center; align-items: center;">
   <!-- First image -->
-  <img src="6.7.png" alt="Design" style="width: 80%; margin-right: 5%;">
+  <img src="6.7.png" alt="Design" style="width: 70%; margin-right: 5%;">
   <!-- Second image -->
-  <img src="6.8.png" alt="Design" style="width: 15%;">
+  <img src="6.8.png" alt="Design" style="width: 25%;">
+  
 </div>
+
 
 <br><br>
 <table>
@@ -167,79 +170,86 @@ I calibrated the mic in a quiet room to a <mark2><a href="https://youtube.com/sh
   </tr>
   <tr>
     <td>0</td>
-    <td>1,400</td>
-    <td>1,150</td>
-    <td>1,275</td>
+    <td>250.30</td>
+    <td>195.42</td>
+    <td>222.86</td>
   </tr>
   <tr>
     <td>1</td>
-    <td>1,300</td>
-    <td>900</td>
-    <td>1,100</td>
+    <td>305.01</td>
+    <td>222.71</td>
+    <td>263.86</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>700</td>
-    <td>700</td>
-    <td>700</td>
+    <td>332.43</td>
+    <td>229.33</td>
+    <td>280.88</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>500</td>
-    <td>500</td>
-    <td>500</td>
+    <td>264.85</td>
+    <td>205.75</td>
+    <td>235.30</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>400</td>
-    <td>350</td>
-    <td>375</td>
+    <td>181.54</td>
+    <td>142.22</td>
+    <td>161.88</td>
   </tr>
   <tr>
     <td>10</td>
-    <td>300</td>
-    <td>300</td>
-    <td>300</td>
+    <td>87.75</td>
+    <td>77.55</td>
+    <td>82.65</td>
   </tr>
   <tr>
     <td>15</td>
-    <td>270</td>
-    <td>250</td>
-    <td>260</td>
+    <td>84.63</td>
+    <td>56.63</td>
+    <td>70.63</td>
   </tr>
   <tr>
     <td>20</td>
-    <td>250</td>
-    <td>225</td>
-    <td>237.5</td>
+    <td>68.59</td>
+    <td>46.90</td>
+    <td>57.75</td>
   </tr>
   <tr>
     <td>25</td>
-    <td>200</td>
-    <td>200</td>
-    <td>200</td>
+    <td>57.14</td>
+    <td>41.51</td>
+    <td>49.33</td>
   </tr>
   <tr>
     <td>30</td>
-    <td>200</td>
-    <td>200</td>
-    <td>200</td>
+    <td>52.89</td>
+    <td>41.43</td>
+    <td>47.16</td>
   </tr>
   <tr>
     <td>35</td>
-    <td>200</td>
-    <td>200</td>
-    <td>200</td>
+    <td>43.92</td>
+    <td>41.35</td>
+    <td>42.64</td>
   </tr>
   <tr>
     <td>40</td>
-    <td>200</td>
-    <td>200</td>
-    <td>200</td>
+    <td>34.24</td>
+    <td>30.39</td>
+    <td>32.32</td>
   </tr>
 </table>
 
+<br><br>
+<p class = "margin"></p>
+I2S mic Calibrated:
+<p class = "margin"></p>
 
+<image src="6.10.png" alt="Design" style="width: 50%;"class = center> </image>
+
+<br>
 <br>
 <image style = "width: 20%" src = "Input.png" alt = "End Pic" class = center> </image> 
 <br><br>
