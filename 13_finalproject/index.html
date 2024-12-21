@@ -56,14 +56,35 @@
   <br><br>
   <h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Coding and User Interface</h2>
   
-  <iframe src="https://app.arduino.cc/sketches/746d10cb-d1bf-4246-86fd-6485578625c0?view-mode=embed" style="height:800px;width:100%;margin:10px 0" frameborder=0></iframe>
+  Initially, I planned to create a personal device incorporating both a microphone and a speaker. 
+  However, considering the limited time frame of the semester, we realized the project would be too ambitious. 
+  As a result, we decided to scale down and focus on a single aspect of the concept. We prioritized establishing the speaker-to-microcontroller interface using Wi-Fi, setting aside the microphone functionality. 
+  This shift led me to target the device’s functionality toward delivering scheduled notifications linked to my Google Calendar.
   <br><br>
-  <h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Video Documentation</h2>
+  To achieve this, I needed to integrate a text-to-speech API into the speaker code and connect it to Google Calendar. 
+  It took a while for me to figure out how to implement the text-to-speech on a esp32 interface as a majority of the time was spent trying to code from scratch.
+  We came very close to getting the text-to-speech functionality working using the OpenAI TTS API with the following code. 
+  However, there seem to be issues with fully processing the data, as parts of the sentences are being cut off.
+  <br><br>
+  <iframe src="https://app.arduino.cc/sketches/746d10cb-d1bf-4246-86fd-6485578625c0?view-mode=embed" style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+  Additionally, due to my limited knowledge at the time about syncing Google profiles and navigating security measures, I was unable to implement the Google Calendar integration within the remaining timeframe.
+  As a workaround, I pivoted to developing a separate web-based interface during <mark2><a href = "../09_networking/index.html">Week 9</a></mark2>. 
+  This interface allowed users to schedule reminders by entering specific details such as time and date, which were then transmitted wirelessly to the device to deliver notifications at the designated times.
+  In the meantime, we discovered a way to generate text-to-speech without using our own API key by utilizing a few lines of code we found online that required only a couple of libraries (facepalm). 
+  Combining this approach with the web interface and code components, the final project eventually came together.
+  <br><br>
+  <iframe src="https://app.arduino.cc/sketches/dc9ec67c-7128-4285-b663-db71e540c476?view-mode=embed" style="height:800px;width:100%;margin:10px 0" frameborder=0></iframe>
+  <br><br>
+  <h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Putting Everything Together</h2>
+
   Unfortunetly, I ran out of time to get the nice video edit of the project in time and uploaded. 
   Below is the demo video I took the day of final presentations. 
   I will be reuploading a completed version of the video on my own time soon!
   <video width="50%" controls autoplay class = center src="IMG_3971.mov" type="video/mp4" ></video>
-
+  <br><br>
+  <h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Future Directions</h2>
+  As mentioned at the outset, the ultimate goal for this device is to expand its functionality by incorporating a microphone, enabling it to perform basic personal assistant tasks. 
+  This would transform it into a discreet personal assistant that you can carry with you, rather than being confined to a stationary device like Alexa in your room.
 <p class="margin"></p>
 
 <br>
