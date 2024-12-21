@@ -9,7 +9,7 @@
 <nav class="navbar navbar-expand-sm navbar-dark" style=" color: #ffffff;">
   <div style="align-items: left; justify-content: left;" class="container-fluid">
     <div class="flexrow">
-      <a href="../index.html">
+      <a href="https://nathanmelenbrink.github.io/ps70/09_networking/index.html">
         <h2 class="nav-title" >PS70 Fall 2024</h2>
       </a>
     </div>
@@ -26,12 +26,57 @@
 <body>
 <xmp style="display:none;">
 <div class="textcontainer">
-<p class="margin">   </p>
 
-<h3>Weeks 10-12: Machine Building</h3>
 
-<h4>Assignment: Build a Drawing Robot</h4>
+<h1 style = "text-align: center;">Week 10-11: Machine Building (Pipe Robot)</h1>
 
+<p class="margin"></p>
+  For these two weeks, the class was surpised with a side project -- building a robot that would help locate and unclog pipe(s) that are preventing the entire left half of all of the bathrooms in the science center from being out of order.
+  According to the building manager, the pipes are long and built such that they are laid slightly off from the original blueprints, mixed with "y"s that have the pipe branch off to different direction, its a whole maze.
+  Thus, a simple drain snake and camera have not been able to help.
+  With a professional drain pipe robot costing up to $10K, we tried to tackle the issue as a class to build a functioning robot for them.
+  <br><br>
+  After several brainstorming sessions, our class decided on a long train-like structure for the robot. 
+  We then divided into smaller teams, each responsible for a specific component of the robot. 
+  I chose to join the camera team, which focused on designing a weatherproof camera capable of transmitting real-time images from the robot to a screen on the user's side.
+  <br><br>
+  <h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Camera</h2>
+  Firstly, we had to choose an appropriate camera. 
+  We selected the <mark2><a href= "https://www.amazon.com/640X480-Interface-Exposure-Control-Display/dp/B07KNTG4DM/ref=asc_df_B07KNTG4DM?mcid=324dea5bdc7d3dc9987c8ee6ce6082cb&tag=hyprod-20&linkCode=df0&hvadid=702423993738&hvpos=&hvnetw=g&hvrand=4826837665352522734&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9194403&hvtargid=pla-2363208582622&psc=1">OV670 Camera module (Non-Fifo)</a></mark2> due to extensive documentation on wifi-less image streaming and the ability to work independently from wire ribbons.
+  Despite what seemed like countless documentation, we found challeneges in connecting all 12 wires to an appropriate pins on our microcontroller of choice - the ESP32. 
+  We knew it was possible because we saw videos of other people using the same microcontroller and getting the camera to work.
+  After extensive digging though various documentation and help from Bobby (pictured below), I finally got camera to display images to my laptop!
+  <br><br><image style = "width: 70%" src = "10.1.jpeg" class = center> </image><br>
+  The next challenge was then figuring out how getting the images streaming onto a screen. 
+  This required several hours of combing the internet on relevant documentation and getting help from Bobby.
+  What was most difficult was getting all the wires were correctly connected to a specific pin with the appropriate capabilities. 
+  Fortunately, only two pins remained unused, and everything functioned perfectly in the end.
+  <br><br><image style = "width: 70%" src = "10.2.jpeg" class = center> </image><br><br>
+  <iframe src="https://app.arduino.cc/sketches/686a4f12-df51-422c-b89d-52688a6cf736?view-mode=embed" style="height:800px;width:100%;margin:10px 0" frameborder=0></iframe>
+  <br><br>
+  Attached in the code are all the file necessary to run the code.
+  The "User_Setup.h" file however, is a file that belongs to the "<TFT_eSPI.h>" library that is utilized and was modified specifically to work with the ESP32 microcontroller that we were using.
+  <br><br>
+  <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-style: bold"> Live Demo of Camera </h2>
+  <br>
+  <video width="70%" controls autoplay muted class="center" src="IMG_3160.MOV" type="video/mp4"></video>
+  <br>
+  Once we had the camera running, we then needed to connect it to a light source and encase everything in a weatherproof casing.
+  I was provided with a recycled light component, originally part of a bike headlight, to integrate with the camera. 
+  I designed a custom 3D printed mount (in orange), perfectly fitted to position the light against the camera. 
+  The assembly was then securely attached to the acrylic back panel of the clear casing.
+  <br><br><image style = "width: 70%" src = "10.3.jpeg" class = center> </image><br><br>
+  Using epoxy and a ballon, I securly encased the camera in a clear acrylic box, fitted with a button that could turn on/off the light.
+  <br><br><image style = "width: 70%" src = "10.4.jpeg" class = center> </image><br><br>
+  <h2 style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Final Product</h2>
+  <br><br><image style = "width: 70%" src = "10.5.png" class = center> </image><br><br>
+  Unfortunetly, we didn't have enough time to complete the robot within the time of the semester, but we got far enough to have a semi-intergrated functioning robot within a span of 2-weeks!
+  Further iterations of the intergrated design will be necessary to make the robot work.
+<p class="margin"></p>
+
+<br>
+<image style = "width: 20%" src = "Machine.png" alt = "End Pic" class = center> </image> 
+<br><br>
 
 </div>
 </xmp>
