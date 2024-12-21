@@ -19,27 +19,25 @@
   .mySlides img {
     width: 80%; /* Adjust width to fit the frame */
     background: white;
-    border: 15px solid white; /* Polaroid-style white frame */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for a realistic effect */
+  }
+  .fade {
+  animation: fadeEffect 1.5s ease-in-out;
   }
 
-  .polaroid-caption {
-    text-align: center;
-    font-family: "Arial", sans-serif;
-    font-size: 14px;
-    color: #333;
-    margin-top: 10px; /* Space between image and caption */
-    padding: 5px 10px;
+  @keyframes fadeEffect {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
-  /* Optional: Add slight rotation for a vintage feel */
-  .mySlides img {
-    transform: rotate(-2deg);
+  .mySlides {
+  display: none; /* Hide slides by default */
   }
 
-  .mySlides:nth-child(even) img {
-    transform: rotate(2deg);
-  }
+
 </style>
 
 <title >Alyssa Suh PS70: Intro to Digital Fabrication </title>
@@ -77,47 +75,45 @@
         <h1>Alyssa's Project Portfolio</h1>
       </div>
     </div>
-    <div class="column">
+    <div class="column" style = "margin-top: 5%; margin-left: 58%; height: 100%">
       <br>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <div class="slideshow-container">
         <!-- Slide 1 -->
+        </div>
         <div class="mySlides imgg">
-          <img src="carousel.1.png" alt="Image 1 Description">
+          <img src="carousel.8.png" alt="Image 8 Description">
         </div>
         <!-- Slide 2 -->
         <div class="mySlides imgg">
-          <img src="carousel.2.png" alt="Image 2 Description">
+          <img src="carousel.1.png" alt="Image 1 Description">
         </div>
         <!-- Slide 3 -->
         <div class="mySlides imgg">
-          <img src="carousel.3.png" alt="Image 3 Description">
+          <img src="carousel.2.png" alt="Image 2 Description">
         </div>
         <!-- Slide 4 -->
+        <!-- <div class="mySlides imgg">
+          <img src="carousel.3.png" alt="Image 3 Description">
+        </div> -->
+        <!-- Slide 5 -->
         <div class="mySlides imgg">
           <img src="carousel.4.png" alt="Image 4 Description">
         </div>
+        <!-- Slide 6 -->
         <div class="mySlides imgg">
           <img src="carousel.5.png" alt="Image 5 Description">
         </div>
+        <!-- Slide 7 -->
         <div class="mySlides imgg">
           <img src="carousel.6.png" alt="Image 6 Description">
         </div>
+        <!-- Slide 8 -->
         <div class="mySlides imgg">
           <img src="carousel.7.png" alt="Image 7 Description">
         </div>
-        <!-- Navigation -->
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
       </div>
       <br>
-      <!-- Dots -->
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-        <span class="dot" onclick="currentSlide(4)"></span> 
-      </div>
     </div>
   </div>
 </div>
@@ -240,31 +236,20 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
 
 <script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
+  let slideIndex = 0;
 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
+  function showSlides() {
+    const slides = document.querySelectorAll('.mySlides');
+    slides.forEach(slide => (slide.style.display = 'none')); // Hide all slides
+    slideIndex++;
+    if (slideIndex > slides.length) slideIndex = 1; // Loop back to the first slide
+    slides[slideIndex - 1].style.display = 'block'; // Show the current slide
+    setTimeout(showSlides, 3000); // Change slide every 3 seconds
   }
 
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
+  // Start the slideshow
+  showSlides();
 
-  function showSlides(n) {
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-  }
 </script>
 
 </html>
